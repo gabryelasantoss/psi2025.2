@@ -5,6 +5,11 @@ app = Flask(__name__)
 def index(): #criando método
     return 'Olá Alba' #exibindo mensagem na tela
 
+@app.route('/contato')
+def contato():
+  return 'alba.lopes@ifrn.edu.br'
+
+
 if __name__ == '__main__':
     app.run()
 
