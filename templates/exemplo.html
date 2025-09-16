@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Agora</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Seção de destaque */
+        .destaque {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .destaque img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        /* Outras notícias */
+        .outras-noticias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+
+        .outras-noticias article {
+            background-color: #fff;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .outras-noticias article img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notícias Agora</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="{{url_for('exemplo2')}}">Política</a></li>
+                <li><a href="#">Esportes</a></li>
+                <li><a href="#">Tecnologia</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaque">
+            <h2>Notícia em Destaque</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Imagem de destaque">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec sapien nec magna gravida fermentum.</p>
+        </section>
+
+        <section class="outras-noticias">
+            <article>
+                <img src="https://via.placeholder.com/300x200" alt="Notícia 1">
+                <h3>Nova descoberta científica impressiona especialistas</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/300x200" alt="Notícia 2">
+                <h3>Times se enfrentam em clássico decisivo</h3>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/300x200" alt="Notícia 3">
+                <h3>Governo anuncia novas medidas econômicas</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Notícias Agora - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
