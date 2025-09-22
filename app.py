@@ -7,7 +7,7 @@ def index(): #criando método
 
 @app.route('/contato')
 def contato():
-  return 'alba.lopes@ifrn.edu.br'
+  return render_template('contato.html', nome = 'Maria', email = 'maria@email.com')
 
 @app.route('/exemplo')
 def exemplo():
@@ -17,6 +17,14 @@ def exemplo():
 def exemplo2():
    return render_template('exemplo2.html')
 
+
+@app.route('/perfil/')
+@app.route('/perfil/<nome>')
+def perfil(nome='fulano'):
+    return render_template('perfil.html', nome=nome)
+
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0')
 
